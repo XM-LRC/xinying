@@ -1,0 +1,23 @@
+ insert into teauser(tid,username,password) values(91,'tAAAA','tAAAA');
+
+ insert into teauser(tid,username,password) values(92,'tBBBB','tBBBB');
+
+ insert into teauser(tid,username,password) values(93,'tCCCC','tCCCC');
+
+
+ insert into teauser(tid,username,password) values(94,'tDDDD','tDDDD');
+
+ insert into teauser(tid,username,password) values(95,'tEEEE','tEEEE');
+
+
+
+
+
+
+
+
+
+
+
+
+

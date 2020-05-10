@@ -1,0 +1,9 @@
+create table score(
+id int not null auto_increment,
+sid int(18) ,
+tid int(18),
+math int(18),
+english int (18),
+pe int(18),
+primary key(id)
+);

@@ -1,0 +1,18 @@
+ insert into stuuser(sid,username,password) values(001,'aaaa','aaaa');
+
+
+insert into stuuser(sid,username,password) values(002,'bbbb','bbbb');
+
+
+ insert into stuuser(sid,username,password) values(003,'cccc','cccc');
+
+ insert into stuuser(sid,username,password) values(004,'dddd','dddd');
+
+insert into stuuser(sid,username,password) values(005,'eeee','eeee');
+
+ insert into stuuser(sid,username,password) values(009,'iiii','iiii');
+
+ insert into stuuser(sid,username,password) values(008,'hhhh','hhhh');
+
+
+

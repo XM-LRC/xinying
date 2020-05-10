@@ -1,0 +1,7 @@
+create table teauser(
+id int not null auto_increment,
+tid int(18) ,
+username varchar(32),
+password varchar(32),
+primary key(id)
+);
