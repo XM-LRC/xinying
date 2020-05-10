@@ -4,7 +4,7 @@
 
 	const DSN = "mysql:host=localhost;dbname=db_xinyin";
 	const DBUSER = "root";
-	const DBPASS = "181491117";
+	const DBPASS = "";
 	
 	try {
 		$db = new PDO(DSN, DBUSER, DBPASS);

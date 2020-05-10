@@ -4,7 +4,7 @@
 	include "function.inc.php";
 	include "config.inc.php";
 
-	echo "你好: ".$_SESSION['name']."<br>";
+	echo "你好: ".$_SESSION['username']."<br>";
 	echo "性别: ".$_SESSION['sex']."<br>";
                 echo "年龄: ".$_SESSION['age']."<br>";
 
@@ -28,8 +28,8 @@
 		
 
 		//如果math不为空，
-		if(!empty($tmp[''])) {
-			$whr[] = "bigtype like '%{$tmp['bigtype']}%'";
+		if(!empty($tmp['bigtype'])) {
+			$whr[] = "bigtype = '{$tmp['bigtype']}'";
 			$args .= "&bigtype={$tmp['bigtype']}";
 		}
 
