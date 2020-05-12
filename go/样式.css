@@ -1,0 +1,83 @@
+/*首页*/
+#m
+{
+    width: 100%;
+    background-color: #FFFFFF;
+}
+#m1
+{
+    /*border-style: solid;*/
+    /*border-color: blue;*/
+    /*border-width: 5px;*/
+    width: 200px;
+    height:700px;
+    float: left;
+    background-color:#FFFFFF; /*#FFCCFF*/
+
+}
+#m2
+{
+    /*border-style: solid;*/
+    /*border-color: red;*/
+    border-width: 2px;
+    width: 1100px;
+    height:700px;
+    background-color: #F4F3EF;
+    float: left;
+
+}
+a
+{
+   text-decoration: none;
+}
+a:link {color:black} /* 未被访问的链接 蓝色 */
+a:visited {color:black} 
+a:hover {color:green} /* 鼠标悬浮在上的链接 蓝色 */
+#tu1
+{
+    border-style: solid;
+    border-color:black;
+    border-width: 2px;
+    width: 300px;
+    height:300px;
+   
+    margin: 10px;
+    float: left;
+}
+#tu2
+{
+    border-style: solid;
+    border-color:black;
+    border-width: 2px;
+    width: 300px;
+    height:300px;
+   
+    margin: 10px;
+    float: left;
+}
+#tu3
+{
+    border-style: solid;
+    border-color:black;
+    border-width: 2px;
+    width: 400px;
+    height:300px;
+   
+    margin: 10px;
+    float: left;
+}
+#tu4
+{
+    border-style: solid;
+    border-color:black;
+    border-width: 2px;
+    width: 300px;
+    height:300px;
+   
+    margin: 10px;
+    float: left;
+}
+
+/*关于我们*/
+
+
