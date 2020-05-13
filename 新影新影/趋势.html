@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="jquery-3.5.0.js"></script>        
+        <script src="echarts.js"></script>
+        <script src="macarons.js"></script>
+    <title>影视可视化平台</title>
+    <link rel="stylesheet" href="样式.css">
+</head>
+<body>
+    <div id="m">
+            <div id="m1">
+                <table align="center" width="190" height="500" 
+                border="3px" cellpadding="5px" cellspacing="100" rules="rows" frame=void >
+                <thead align="center" bgcolor="#FFFFF" valign="center">
+                   <tr>
+                     <td >  <h2>新影<br/> 可视化分析平台</h2></td>
+                   </tr>
+               </thead>
+               <tbody align="center" bgcolor="#FFFFF" valign="center">
+                <tr>
+                    <td width="18"  style="border-right: solid; border-color: dimgrey;vertical-align: middle;"> 
+                      <a href="界面.html">
+                          <img src="images/0.png" alt="" align="middle">
+                          <b>新影&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp首页</b>
+                        </a> 
+                    </td>
+                   </tr>
+                   <tr>
+                    <td width="18"  style="border-right: solid; border-color: dimgrey;vertical-align: middle;"> 
+                      <a href="占比.html">
+                          <img src="images/1.png" alt="" align="middle">
+                          <b>影视占比分析</b>
+                        </a> 
+                    </td>
+                   </tr>
+                   <tr>
+                    <td width="18"  style="border-right: solid; border-color: dimgrey;"> 
+                        <a href="词云.html">
+                            <img src="images/2.png" alt="" align="middle">
+                            <b> 黄金影视词云</b> 
+                       </a>
+                        
+                    </td>
+                   </tr>
+                   <tr>
+                    <td width="18"  style="border-right: solid; border-color: dimgrey;"> 
+                        <a href="趋势.html">
+                            <img src="images/3.png" alt="" align="middle">
+                      <b>影视趋势分析</b> 
+                        </a>
+                         
+                    </td>
+                   </tr>
+                   <tr>
+                    <td width="18"  style="border-right: solid; border-color: dimgrey;"> 
+                        <a href="推荐.html">
+                             <img src="images/4.png" alt="" align="middle">
+                       <b> 好剧&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp推荐</b>
+                        </a>
+                       
+                    </td>
+                   </tr>
+                   <tr>
+                    <td width="18"  style="border-right: solid; border-color: dimgrey;"> 
+                        
+                            <a href="关于我们.html">
+                        <img src="images/5.png" alt="" align="middle">
+                           <b> 关于&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp我们</b>
+                        </a>
+                       
+                        
+                    </td>
+                   </tr>
+                   <tr>
+                    <td width="18"  style="border-right: solid; border-color: dimgrey;"> 
+                        
+                            <a href="login.php">
+                        <img src="images/6.png" alt="" align="middle">
+                           <b> 用户&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp登录</b>
+                        </a>
+                       
+                        
+                    </td>
+                   </tr>
+               </tbody>
+               </table>
+            </div>
+
+       <div id="m2">
+            <div id="wtu1">
+            </div>
+            <div id="wtu2">
+            </div>
+            <div id="wtu3">
+            </div>
+            <div id="wtu4">
+            </div>
+       </div>
+    </div>
+    
+    
+</body>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('wtu1'), 'macarons');
+    
+    option = {
+        title: {
+            text: ''
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            data: ['喜剧','爱情','动作','科幻','战争','家庭']
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        toolbox: {
+            feature: {
+                saveAsImage: {}
+            }
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            data: ['2010','2011','2012','2013','2014','2015','2016','2017','2018','2019']
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [
+            {
+                name: '喜剧',
+                type: 'line',
+                stack: '总量',
+                data: [499,508,487,513,591,702,847,827,773,202]
+                // data: [499,508,487,513,591,702,847,827,773,202,24]
+            },
+            {
+                name: '爱情',
+                type: 'line',
+                stack: '总量',
+                data: [348,317,369,391,470,464,644,640,514,135]
+                // data: [348,317,369,391,470,464,644,640,514,135,8]
+            },
+            {
+                name: '动作',
+                type: 'line',
+                stack: '总量',
+                data: [366,333,331,376,372,413,573,609,569,197]
+                // data: [366,333,331,376,372,413,573,609,569,197,47]
+            },
+            {
+                name: '科幻',
+                type: 'line',
+                stack: '总量',
+                data: [225,178,174,203,216,247,349,356,311,86]
+                // data: [225,178,174,203,216,247,349,356,311,86,26]
+            },
+            {
+                name: '战争',
+                type: 'line',
+                stack: '总量',
+                data: [97,102,97,88,7,101,118,124,117,47]
+                // data: [97,102,97,88,7,101,118,124,117,47,6]
+            },
+            {
+                name: '家庭',
+                type: 'line',
+                stack: '总量',
+                data: [97,102,92,101,12,120,112,87,96,28]
+                // data: [97,102,92,101,12,120,112,87,96,28,7]
+            },
+        ]
+    };
+    if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+    }
+    // 插入结束
+           </script>
+           <script type="text/javascript">
+            var myChart = echarts.init(document.getElementById('wtu2'), 'macarons');
+            
+            option = {
+                title: {
+                    text: ''
+                },
+                tooltip: {
+                    trigger: 'axis'
+                },
+                legend: {
+                    data: ['喜剧','爱情','动作','科幻','战争','家庭']
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                toolbox: {
+                    feature: {
+                        saveAsImage: {}
+                    }
+                },
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['2010','2011','2012','2013','2014','2015','2016','2017','2018','2019']
+                },
+                yAxis: {
+                    type: 'value'
+                },
+                series: [
+                    {
+                        name: '喜剧',
+                        type: 'line',
+                        stack: '总量',
+                        data: [499,508,487,513,591,702,847,827,773,202]
+                        // data: [499,508,487,513,591,702,847,827,773,202,24]
+                    },
+                    {
+                        name: '爱情',
+                        type: 'line',
+                        stack: '总量',
+                        data: [348,317,369,391,470,464,644,640,514,135]
+                        // data: [348,317,369,391,470,464,644,640,514,135,8]
+                    },
+                    {
+                        name: '动作',
+                        type: 'line',
+                        stack: '总量',
+                        data: [366,333,331,376,372,413,573,609,569,197]
+                        // data: [366,333,331,376,372,413,573,609,569,197,47]
+                    },
+                    {
+                        name: '科幻',
+                        type: 'line',
+                        stack: '总量',
+                        data: [225,178,174,203,216,247,349,356,311,86]
+                        // data: [225,178,174,203,216,247,349,356,311,86,26]
+                    },
+                    {
+                        name: '战争',
+                        type: 'line',
+                        stack: '总量',
+                        data: [97,102,97,88,7,101,118,124,117,47]
+                        // data: [97,102,97,88,7,101,118,124,117,47,6]
+                    },
+                    {
+                        name: '家庭',
+                        type: 'line',
+                        stack: '总量',
+                        data: [97,102,92,101,12,120,112,87,96,28]
+                        // data: [97,102,92,101,12,120,112,87,96,28,7]
+                    },
+                ]
+            };
+            if (option && typeof option === "object") {
+                myChart.setOption(option, true);
+            }
+            // 插入结束
+                   </script>
+                   <script type="text/javascript">
+                    var myChart = echarts.init(document.getElementById('wtu3'), 'macarons');
+                    
+                    option = {
+                        title: {
+                            text: ''
+                        },
+                        tooltip: {
+                            trigger: 'axis'
+                        },
+                        legend: {
+                            data: ['喜剧','爱情','动作','科幻','战争','家庭']
+                        },
+                        grid: {
+                            left: '3%',
+                            right: '4%',
+                            bottom: '3%',
+                            containLabel: true
+                        },
+                        toolbox: {
+                            feature: {
+                                saveAsImage: {}
+                            }
+                        },
+                        xAxis: {
+                            type: 'category',
+                            boundaryGap: false,
+                            data: ['2010','2011','2012','2013','2014','2015','2016','2017','2018','2019']
+                        },
+                        yAxis: {
+                            type: 'value'
+                        },
+                        series: [
+                            {
+                                name: '喜剧',
+                                type: 'line',
+                                stack: '总量',
+                                data: [499,508,487,513,591,702,847,827,773,202]
+                                // data: [499,508,487,513,591,702,847,827,773,202,24]
+                            },
+                            {
+                                name: '爱情',
+                                type: 'line',
+                                stack: '总量',
+                                data: [348,317,369,391,470,464,644,640,514,135]
+                                // data: [348,317,369,391,470,464,644,640,514,135,8]
+                            },
+                            {
+                                name: '动作',
+                                type: 'line',
+                                stack: '总量',
+                                data: [366,333,331,376,372,413,573,609,569,197]
+                                // data: [366,333,331,376,372,413,573,609,569,197,47]
+                            },
+                            {
+                                name: '科幻',
+                                type: 'line',
+                                stack: '总量',
+                                data: [225,178,174,203,216,247,349,356,311,86]
+                                // data: [225,178,174,203,216,247,349,356,311,86,26]
+                            },
+                            {
+                                name: '战争',
+                                type: 'line',
+                                stack: '总量',
+                                data: [97,102,97,88,7,101,118,124,117,47]
+                                // data: [97,102,97,88,7,101,118,124,117,47,6]
+                            },
+                            {
+                                name: '家庭',
+                                type: 'line',
+                                stack: '总量',
+                                data: [97,102,92,101,12,120,112,87,96,28]
+                                // data: [97,102,92,101,12,120,112,87,96,28,7]
+                            },
+                        ]
+                    };
+                    if (option && typeof option === "object") {
+                        myChart.setOption(option, true);
+                    }
+                    // 插入结束
+                           </script>
+                           <script type="text/javascript">
+                            var myChart = echarts.init(document.getElementById('wtu4'), 'macarons');
+                            
+                            option = {
+                                title: {
+                                    text: ''
+                                },
+                                tooltip: {
+                                    trigger: 'axis'
+                                },
+                                legend: {
+                                    data: ['喜剧','爱情','动作','科幻','战争','家庭']
+                                },
+                                grid: {
+                                    left: '3%',
+                                    right: '4%',
+                                    bottom: '3%',
+                                    containLabel: true
+                                },
+                                toolbox: {
+                                    feature: {
+                                        saveAsImage: {}
+                                    }
+                                },
+                                xAxis: {
+                                    type: 'category',
+                                    boundaryGap: false,
+                                    data: ['2010','2011','2012','2013','2014','2015','2016','2017','2018','2019']
+                                },
+                                yAxis: {
+                                    type: 'value'
+                                },
+                                series: [
+                                    {
+                                        name: '喜剧',
+                                        type: 'line',
+                                        stack: '总量',
+                                        data: [499,508,487,513,591,702,847,827,773,202]
+                                        // data: [499,508,487,513,591,702,847,827,773,202,24]
+                                    },
+                                    {
+                                        name: '爱情',
+                                        type: 'line',
+                                        stack: '总量',
+                                        data: [348,317,369,391,470,464,644,640,514,135]
+                                        // data: [348,317,369,391,470,464,644,640,514,135,8]
+                                    },
+                                    {
+                                        name: '动作',
+                                        type: 'line',
+                                        stack: '总量',
+                                        data: [366,333,331,376,372,413,573,609,569,197]
+                                        // data: [366,333,331,376,372,413,573,609,569,197,47]
+                                    },
+                                    {
+                                        name: '科幻',
+                                        type: 'line',
+                                        stack: '总量',
+                                        data: [225,178,174,203,216,247,349,356,311,86]
+                                        // data: [225,178,174,203,216,247,349,356,311,86,26]
+                                    },
+                                    {
+                                        name: '战争',
+                                        type: 'line',
+                                        stack: '总量',
+                                        data: [97,102,97,88,7,101,118,124,117,47]
+                                        // data: [97,102,97,88,7,101,118,124,117,47,6]
+                                    },
+                                    {
+                                        name: '家庭',
+                                        type: 'line',
+                                        stack: '总量',
+                                        data: [97,102,92,101,12,120,112,87,96,28]
+                                        // data: [97,102,92,101,12,120,112,87,96,28,7]
+                                    },
+                                ]
+                            };
+                            if (option && typeof option === "object") {
+                                myChart.setOption(option, true);
+                            }
+                            // 插入结束
+                                   </script>
+</html>
