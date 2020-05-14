@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="jquery-3.5.0.js"></script>        
+        <script src="echarts.js"></script>
+        <script src="macarons.js"></script>
+        <script src="sakura.js"></script>
+        <script src="tech-blue.js"></script>
+    <title>影视可视化平台</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chang.css">
+</head>
+<body>
+    <div id="m">
+        <div id="m1">
+            <table align="center" width="190" height="500" 
+            border="3px" cellpadding="5px" cellspacing="100" rules="rows" frame=void >
+            <thead align="center" bgcolor="#FFFFF" valign="center">
+               <tr>
+                 <td >  <h2>新影<br/> 可视化分析平台</h2></td>
+               </tr>
+           </thead>
+           <tbody align="center" bgcolor="#FFFFF" valign="center">
+            <tr>
+                <td width="18"  style="border-right: solid; border-color: dimgrey;vertical-align: middle;"> 
+                  <a href="index.html">
+                      <img src="images/0.png" alt="" align="middle">
+                      <b>新影&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp首页</b>
+                    </a> 
+                </td>
+               </tr>
+               <tr>
+                <td width="18"  style="border-right: solid; border-color: dimgrey;"> 
+                    <a href="chnge.html">
+                        <img src="images/3.png" alt="" align="middle">
+                  <b>影视趋势分析</b> 
+                    </a>
+                     
+                </td>
+               </tr>
+
+               <tr>
+                <td width="18"  style="border-right: solid; border-color: dimgrey;"> 
+                    <a href="cloud.html">
+                        <img src="images/2.png" alt="" align="middle">
+                        <b> 黄金影视词云</b> 
+                   </a>
+                    
+                </td>
+               </tr>
+               <tr>
+                <td width="18"  style="border-right: solid; border-color: dimgrey;vertical-align: middle;"> 
+                  <a href="percent.html">
+                      <img src="images/1.png" alt="" align="middle">
+                      <b>影视占比分析</b>
+                    </a> 
+                </td>
+               </tr>
+               
+              
+               <tr>
+                <td width="18"  style="border-right: solid; border-color: dimgrey;"> 
+                    <a href="suggest.html">
+                         <img src="images/4.png" alt="" align="middle">
+                   <b> 好剧&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp推荐</b>
+                    </a>
+                   
+                </td>
+               </tr>
+               <tr>
+                <td width="18"  style="border-right: solid; border-color: dimgrey;"> 
+                    
+                        <a href="login.php">
+                    <img src="images/6.png" alt="" align="middle">
+                       <b> 用户&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp登录</b>
+                    </a>
+                   
+                    
+                </td>
+               </tr>
+               <tr>
+                <td width="18"  style="border-right: solid; border-color: dimgrey;"> 
+                    
+                        <a href="introduce.html">
+                    <img src="images/5.png" alt="" align="middle">
+                       <b> 关于&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp我们</b>
+                    </a>
+                   
+                    
+                </td>
+               </tr>
+               
+           </tbody>
+           </table>
+        </div>
+
+       <div id="m2">
+            <div id="ztu1">
+                <div id="ztu11">
+
+                </div>
+                <div id="ztu12">
+                 电影：在各类电影中喜剧类占比最多，爱情类紧跟其后，动作类排名次之,
+                 其他各类占比较为均匀，但均为少数，不及前3类占比多。
+                </div>
+            </div>
+            <div id="ztu3">
+                <div id="ztu31">
+
+                </div>
+                <div id="ztu32">
+                 番剧：番剧的主流主要是奇幻，战斗，以及日常生活方面的一些番剧。
+                 但番剧的各类型的占比变化比较平稳，没有明显两极化现象。
+                </div>
+            </div>
+            <div id="ztu4">
+                <div id="ztu41">
+
+                </div>
+                <div id="ztu42">
+                电视：人们观看电视主要选择湖南,浙江，江苏卫视的电视剧。
+                </div>
+            </div>
+       </div>
+    </div>
+    
+    
+</body>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('ztu31'), 'sakura');
+    
+    option = null;
+    option = {
+        tooltip: {
+            trigger: 'item',
+            formatter: '{a} <br/>{b}: {c} ({d}%)'
+        },
+        legend: {
+            orient: 'vertical',
+            left: 10,
+            data: ['热血','穿越','奇幻','战斗','搞笑','日常','萌系','其他']
+        },
+        series: [
+            {
+                name: '番剧类型',
+                type: 'pie',
+                radius: ['50%', '70%'],
+                avoidLabelOverlap: false,
+                label: {
+                    show: false,
+                    position: 'center'
+                },
+                emphasis: {
+                    label: {
+                        show: true,
+                        fontSize: '30',
+                        fontWeight: 'bold'
+                    }
+                },
+                labelLine: {
+                    show: false
+                },
+                data: [
+                    {value: 123, name: '热血'},
+                    {value: 77, name: '穿越'},
+                    {value: 272, name: '奇幻'},
+                    {value: 226, name: '战斗'},
+                    {value: 139, name: '搞笑'},
+                    {value: 217, name: '日常'},
+                    {value: 139, name: '萌系'},
+                    {value: 430, name: '其他'}
+                ]
+            }
+        ]
+    };
+    ;
+    if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+    }
+    // 插入结束
+           </script>
+          <script type="text/javascript">
+            var myChart = echarts.init(document.getElementById('ztu11'), 'macarons');
+            
+            option = null;
+            option = {
+                tooltip: {
+                    trigger: 'item',
+                    formatter: '{a} <br/>{b}: {c} ({d}%)'
+                },
+                
+                legend: {
+                    orient: 'vertical',
+                    left: 10,
+                    data: ['喜剧','爱情','动作','科幻','战争','家庭','奇幻','古装','惊悚','历史','音乐','悬疑','其他']
+                },
+                series: [
+                    {
+                        name: '电影类型',
+                        type: 'pie',
+                        radius: ['50%', '70%'],
+
+                        avoidLabelOverlap: false,
+                        
+                        label: {
+                            show: false,
+                            position: 'center'
+                        },
+                        emphasis: {
+                            label: {
+                                show: true,
+                                fontSize: '30',
+                                fontWeight: 'bold'
+                            }
+                        },
+                        labelLine: {
+                            show: false
+                        },
+                        data: [
+                            {value: 9513, name: '喜剧'},
+                            {value: 7038, name: '爱情'},
+                            {value: 6097, name: '动作'},
+                            {value: 2368, name: '科幻'},
+                            {value: 1382, name: '战争'},
+                            {value: 1485, name: '家庭'},
+                            {value: 2387, name: '奇幻'},
+                            {value: 567, name: '古装'},
+                            {value: 6051, name: '惊悚'},
+                            {value: 1135, name: '历史'},
+                            {value: 1043, name: '音乐'},
+                            {value: 2965, name: '悬疑'},
+                            {value: 963, name: '其他'}
+                        ]
+                    }
+                ]
+            };
+            ;
+            if (option && typeof option === "object") {
+                myChart.setOption(option, true);
+            }
+            // 插入结束
+                   </script>
+                  <script type="text/javascript">
+                    var myChart = echarts.init(document.getElementById('ztu41'), 'tech-blue');
+                    
+                    option = null;
+                    option = {
+                        title: {
+                            
+                        },
+                        tooltip: {
+                            trigger: 'item',
+                            formatter: '{a} <br/>{b}: {c} ({d}%)'
+                        },
+                        legend: {
+                            orient: 'vertical',
+                            left: 10,
+                            data: ['湖南卫视','浙江卫视','北京卫视','上海东方卫视','江苏卫视','深圳卫视','安徽卫视','广东卫视']
+                        },
+                        series: [
+                            {
+                                name: '电影类型',
+                                type: 'pie',
+                                radius: ['50%', '70%'],
+                                avoidLabelOverlap: false,
+                                label: {
+                                    show: false,
+                                    position: 'center'
+                                },
+                                emphasis: {
+                                    label: {
+                                        show: true,
+                                        fontSize: '30',
+                                        fontWeight: 'bold'
+                                    }
+                                },
+                                labelLine: {
+                                    show: false
+                                },
+                                data: [
+                                    {value: 2.0975, name: '湖南卫视'},
+                                    {value: 1.749333, name: '浙江卫视'},
+                                    {value: 0.910333, name: '北京卫视'},
+                                    {value: 1.319333, name: '上海东方卫视'},
+                                    {value: 1.726667, name: '江苏卫视'},
+                                    {value: 0.383833, name: '深圳卫视'},
+                                    {value: 0.303167, name: '安徽卫视'},
+                                    {value: 0.372333, name: '广东卫视'}
+                                ]
+                            }
+                        ]
+                    };
+                    ;
+                    if (option && typeof option === "object") {
+                        myChart.setOption(option, true);
+                    }
+                    // 插入结束
+                           </script>
+</html>

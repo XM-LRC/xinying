@@ -1,0 +1,153 @@
+/*趋势*/
+#wtu1
+{
+    /*border-style: solid;
+    border-color:black;
+    border-width: 2px;*/
+    width: 500px;
+    height:350px;
+   background-color: white;
+    margin: 10px;
+    float: left;
+}
+#wtu11
+{
+    width: 500px;
+    height: 300px;
+    float: left;
+    border-bottom: solid;
+    border-color: #F4F3EF;
+    float: left;
+}
+#wtu12
+{
+    
+    width: 500px;
+    margin: 0px;
+    float: left;
+    text-align: center;
+}
+#wtu2
+{
+    /*border-style: solid;
+    border-color:black;
+    border-width: 2px;*/
+    width: 500px;
+    height:350px;
+   background-color: white;
+    margin: 10px;
+    float: left;
+}
+#wtu21
+{
+    width: 500px;
+    height: 300px;
+    float: left;
+    border-bottom: solid;
+    border-color: #F4F3EF;
+    float: left;
+}
+#wtu22
+{
+    
+    width: 500px;
+    margin: 0px;
+    float: left;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 10px;
+}
+#wtu3
+{
+    /*border-style: solid;
+    border-color:black;
+    border-width: 2px;*/
+    width: 500px;
+    height:350px;
+   background-color: white;
+    margin: 10px;
+    
+    float: left;
+}
+#wtu31
+{
+    width: 500px;
+    height: 300px;
+    float: left;
+    border-bottom: solid;
+    border-color: #F4F3EF;
+    float: left;
+}
+#wtu32
+{
+    
+    width: 500px;
+    margin: 0px;
+    float: left;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 10px;
+}
+#wtu4
+{
+    /*border-style: solid;
+    border-color:black;
+    border-width: 2px;*/
+    width: 500px;
+    height:350px;
+   background-color: white;
+    margin: 10px;
+    
+    float: left;
+
+}
+#wtu41
+{
+    width: 500px;
+    height: 300px;
+    float: left;
+    border-bottom: solid;
+    border-color: #F4F3EF;
+    float: left;
+}
+#wtu42
+{
+    
+    width: 500px;
+    margin: 0px;
+    float: left;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 10px;
+}
+#wtu5
+{
+    /*border-style: solid;
+    border-color:black;
+    border-width: 2px;*/
+    width: 900px;
+    height:550px;
+   background-color: white;
+    margin: 10px;
+    float: left;
+
+}
+#wtu51
+{
+    width: 900px;
+    height: 500px;
+    float: left;
+    border-bottom: solid;
+    border-color: #F4F3EF;
+    float: left;
+}
+#wtu52
+{
+    
+    width: 900px;
+    margin: 0px;
+    float: left;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 10px;
+}

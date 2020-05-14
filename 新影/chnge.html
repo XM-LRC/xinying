@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="jquery-3.5.0.js"></script>        
+        <script src="echarts.js"></script>
+        <script src="macarons.js"></script>
+        <script src="sakura.js"></script>
+        <script src="tech-blue.js"></script>
+    <title>影视可视化平台</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cloud.css">
+    <link rel="stylesheet" href="chang.css">
+</head>
+<body>
+    <div id="m">
+        <div id="m1">
+            <table align="center" width="190" height="500" 
+            border="3px" cellpadding="5px" cellspacing="100" rules="rows" frame=void >
+            <thead align="center" bgcolor="#FFFFF" valign="center">
+               <tr>
+                 <td >  <h2>新影<br/> 可视化分析平台</h2></td>
+               </tr>
+           </thead>
+           <tbody align="center" bgcolor="#FFFFF" valign="center">
+            <tr>
+                <td width="18"  style="border-right: solid; border-color: dimgrey;vertical-align: middle;"> 
+                  <a href="index.html">
+                      <img src="images/0.png" alt="" align="middle">
+                      <b>新影&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp首页</b>
+                    </a> 
+                </td>
+               </tr>
+               <tr>
+                <td width="18"  style="border-right: solid; border-color: dimgrey;"> 
+                    <a href="chnge.html">
+                        <img src="images/3.png" alt="" align="middle">
+                  <b>影视趋势分析</b> 
+                    </a>
+                     
+                </td>
+               </tr>
+
+               <tr>
+                <td width="18"  style="border-right: solid; border-color: dimgrey;"> 
+                    <a href="cloud.html">
+                        <img src="images/2.png" alt="" align="middle">
+                        <b> 黄金影视词云</b> 
+                   </a>
+                    
+                </td>
+               </tr>
+               <tr>
+                <td width="18"  style="border-right: solid; border-color: dimgrey;vertical-align: middle;"> 
+                  <a href="percent.html">
+                      <img src="images/1.png" alt="" align="middle">
+                      <b>影视占比分析</b>
+                    </a> 
+                </td>
+               </tr>
+               
+              
+               <tr>
+                <td width="18"  style="border-right: solid; border-color: dimgrey;"> 
+                    <a href="suggest.html">
+                         <img src="images/4.png" alt="" align="middle">
+                   <b> 好剧&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp推荐</b>
+                    </a>
+                   
+                </td>
+               </tr>
+               <tr>
+                <td width="18"  style="border-right: solid; border-color: dimgrey;"> 
+                    
+                        <a href="login.php">
+                    <img src="images/6.png" alt="" align="middle">
+                       <b> 用户&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp登录</b>
+                    </a>
+                   
+                    
+                </td>
+               </tr>
+               <tr>
+                <td width="18"  style="border-right: solid; border-color: dimgrey;"> 
+                    
+                        <a href="introduce.html">
+                    <img src="images/5.png" alt="" align="middle">
+                       <b> 关于&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp我们</b>
+                    </a>
+                   
+                    
+                </td>
+               </tr>
+               
+           </tbody>
+           </table>
+        </div>
+
+       <div id="m2">
+            <div id="wtu1">
+                <div id="wtu11">
+
+                </div>
+                <div id="wtu12">
+                    电影：2016年之前电影制作有上升趋势，
+                    在2016——2017年稳定，最近制作量各类型均有下降趋势。
+                </div>
+            </div>
+            <div id="wtu2">
+                <div id="wtu21">
+
+                </div>
+                <div id="wtu22">
+                    番剧：近年来稳定变化，无过度波动。
+                   
+                </div>
+            </div>
+            <div id="wtu3">
+                <div id="wtu31">
+
+                </div>
+                <div id="wtu32">
+                    电视剧收视变化情况
+                </div>
+            </div>
+            <div id="wtu4">
+                <div id="wtu41">
+
+                </div>
+                <div id="wtu42">
+                    电影各类型变化趋势
+                </div>
+            </div>
+            <div id="wtu5">
+                <div id="wtu51">
+
+                </div>
+                <div id="wtu52">
+                    番剧各类型变化趋势
+                </div>
+            </div>
+       </div>
+    </div>
+    
+    
+</body>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('wtu11'), 'macarons');
+    
+    option = {
+        title: {
+            text: ''
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            data: ['喜剧','爱情','动作','科幻','战争','家庭']
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        toolbox: {
+            feature: {
+                saveAsImage: {}
+            }
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            data: ['2010','2011','2012','2013','2014','2015','2016','2017','2018','2019']
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [
+            {
+                name: '喜剧',
+                type: 'line',
+                stack: '总量',
+                data: [499,508,487,513,591,702,847,827,773,202]
+                // data: [499,508,487,513,591,702,847,827,773,202,24]
+            },
+            {
+                name: '爱情',
+                type: 'line',
+                stack: '总量',
+                data: [348,317,369,391,470,464,644,640,514,135]
+                // data: [348,317,369,391,470,464,644,640,514,135,8]
+            },
+            {
+                name: '动作',
+                type: 'line',
+                stack: '总量',
+                data: [366,333,331,376,372,413,573,609,569,197]
+                // data: [366,333,331,376,372,413,573,609,569,197,47]
+            },
+            {
+                name: '科幻',
+                type: 'line',
+                stack: '总量',
+                data: [225,178,174,203,216,247,349,356,311,86]
+                // data: [225,178,174,203,216,247,349,356,311,86,26]
+            },
+            {
+                name: '战争',
+                type: 'line',
+                stack: '总量',
+                data: [97,102,97,88,7,101,118,124,117,47]
+                // data: [97,102,97,88,7,101,118,124,117,47,6]
+            },
+            {
+                name: '家庭',
+                type: 'line',
+                stack: '总量',
+                data: [97,102,92,101,12,120,112,87,96,28]
+                // data: [97,102,92,101,12,120,112,87,96,28,7]
+            },
+        ]
+    };
+    if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+    }
+    // 插入结束
+           </script>
+           <script type="text/javascript">
+            var myChart = echarts.init(document.getElementById('wtu21'), 'sakura');
+            
+            option = {
+                title: {
+                    text: ''
+                },
+                tooltip: {
+                    trigger: 'axis'
+                },
+                legend: {
+                    data: ['热血','穿越','奇幻','战斗','搞笑','日常','萌系','其他']
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                toolbox: {
+                    feature: {
+                        saveAsImage: {}
+                    }
+                },
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['2015','2016','2017','2018','2019','2020']
+                },
+                yAxis: {
+                    type: 'value'
+                },
+                series: [
+                    {
+                        name: '热血',
+                        type: 'line',
+                        stack: '总量',
+                        data: [36,29,16,15,21,6]
+                        // data: [499,508,487,513,591,702,847,827,773,202,24]
+                    },
+                    {
+                        name: '穿越',
+                        type: 'line',
+                        stack: '总量',
+                        data: [7,10,8,13,26,13]
+                        // data: [348,317,369,391,470,464,644,640,514,135,8]
+                    },
+                    {
+                        name: '奇幻',
+                        type: 'line',
+                        stack: '总量',
+                        data: [53,53,41,33,60,32]
+                        // data: [366,333,331,376,372,413,573,609,569,197,47]
+                    },
+                    {
+                        name: '战斗',
+                        type: 'line',
+                        stack: '总量',
+                        data: [42,47,33,37,44,23]
+                        // data: [225,178,174,203,216,247,349,356,311,86,26]
+                    },
+                    {
+                        name: '搞笑',
+                        type: 'line',
+                        stack: '总量',
+                        data: [20,20,24,26,27,22]
+                        // data: [97,102,97,88,7,101,118,124,117,47,6]
+                    },
+                    {
+                        name: '日常',
+                        type: 'line',
+                        stack: '总量',
+                        data: [60,45,32,26,27,22]
+                    },
+                    {
+                        name: '萌系',
+                        type: 'line',
+                        stack: '总量',
+                        data: [34,26,11,25,27,16]
+                    },
+                    {
+                        name: '其他',
+                        type: 'line',
+                        stack: '总量',
+                        data: [66,101,104,78,52,29]
+                    },
+                ]
+            };
+            if (option && typeof option === "object") {
+                myChart.setOption(option, true);
+            }
+            // 插入结束
+                   </script>
+                   <script type="text/javascript">
+                    var myChart = echarts.init(document.getElementById('wtu31'), 'tech-blue');
+                    
+                    option = {
+                        title: {
+                            text: ''
+                        },
+                        tooltip: {
+                            trigger: 'axis'
+                        },
+                        legend: {
+                            data: ['5月6日','5月7日','5月8日','5月9日','5月10日','5月11日']
+                        },
+                        grid: {
+                            left: '3%',
+                            right: '4%',
+                            bottom: '3%',
+                            containLabel: true
+                        },
+                        toolbox: {
+                            feature: {
+                                saveAsImage: {}
+                            }
+                        },
+                        xAxis: {
+                            type: 'category',
+                            boundaryGap: false,
+                            data: ['5月6日','5月7日','5月8日','5月9日','5月10日','5月11日']
+                        },
+                        yAxis: {
+                            type: 'value'
+                        },
+                        series: [
+                            {
+                                name: '湖南卫视',
+                                type: 'line',
+                                stack: '总量',
+                                data: [2.458,2.26,2.741,1.521,1.573,2.032]
+                            },
+                            {
+                                name: '浙江卫视',
+                                type: 'line',
+                                stack: '总量',
+                                data: [1.714,1.693,2.039,1.649,1.765,1.636]
+                            },
+                            {
+                                name: '北京卫视',
+                                type: 'line',
+                                stack: '总量',
+                                data: [1.367,1.434,0.498,0.624,0.65,0.889]
+                            },
+                            {
+                                name: '上海东方卫视',
+                                type: 'line',
+                                stack: '总量',
+                                data: [1.591,1.708,0.674,1.259,1.313,1.371]
+                            },
+                            {
+                                name: '江苏卫视',
+                                type: 'line',
+                                stack: '总量',
+                                data: [1.362,1.597,1.595,1.808,1.939,2.059]
+                            },
+                            {
+                                name: '深圳卫视',
+                                type: 'line',
+                                stack: '总量',
+                                data: [0.361,0.398,0.399,0.367,0.339,0.439]
+                            },
+                            {
+                                name: '安徽卫视',
+                                type: 'line',
+                                stack: '总量',
+                                data: [0.293,0.429,0.379,0.264,0.207,0.247]
+                            },
+                            {
+                                name: '广东卫视',
+                                type: 'line',
+                                stack: '总量',
+                                data: [0.332,0.366,0.352,0.403,0.362,0.419]
+                            },
+                        ]
+                    };
+                    if (option && typeof option === "object") {
+                        myChart.setOption(option, true);
+                    }
+                    // 插入结束
+                           </script>
+                           <script type="text/javascript">
+                            var myChart = echarts.init(document.getElementById('wtu41'), 'macarons');
+                            // myChart.showLoading(); //显示加载动画
+                            // $.get('movies_style.json').done(function (data) {//jquery的ajax读取文件,异步数据加载
+                                // myChart.hideLoading();//数据加载完成后隐藏动画
+                                // var data = JSON.parse(data);  //没有这句话，data.categories和data.data都是undefined，但发布的时候要注释掉
+                                // console.dir(data.data);
+                                myChart.setOption({//指定图表的配置项和数据,并显示,可以作为一个var对象
+                                    title: {
+                                        text: '电影类型数量统计表',
+                                        textStyle: {fontSize: '25'},
+                                        left: 'center',
+                                        top: '20px'
+                                    },
+                                    tooltip: {},
+                                    legend: {//图例解释
+                                        data: ["喜剧","爱情","动作","科幻","战争","家庭","奇幻","古装","惊悚","历史","音乐","悬疑","其他"],
+                                        top: '20px',
+                                        right: '110px'
+                                    },
+                                    xAxis: {
+                                        data: ["喜剧","爱情","动作","科幻","战争","家庭","奇幻","古装","惊悚","历史","音乐","悬疑","其他"],
+                                        axisLabel:{//禁止隐藏横坐标
+                                            interval: 0
+                                        }
+                                    },
+                                    yAxis: {},
+                                    series: [{
+                                        name: '电影类型',
+                                        type: 'bar',
+                                        data: [9513,7038,6097,2368,1382,1485,2387,567,6051,1135,1043,2965,963]
+                                    }]
+                                });
+                            // });
+                            </script>
+                            <script type="text/javascript">
+                                // 基于准备好的dom，初始化echarts实例
+                                var myChart = echarts.init(document.getElementById('wtu51'));
+                             
+                                // 指定图表的配置项和数据
+                                var option = {
+                                    title: {
+                                        text: ""
+                                    },
+                                    //提示框取默认值，即鼠标移动到柱状图会显示内容
+                                    tooltip: {
+                                //触发类型；轴触发，axis则鼠标hover到一条柱状图显示全部数据，item则鼠标hover到折线点显示相应数据，
+                                        trigger: 'axis', 
+                                        axisPointer: { //坐标轴指示器，坐标轴触发有效，
+                                            type: 'cross', //默认为line，line直线，cross十字准星，shadow阴影
+                                            crossStyle: {
+                                                color: '#fff'
+                                            }
+                                        }
+                                    },
+                             
+                                    //图例
+                                    legend: {
+                                        data:["热血","穿越","奇幻","战斗","搞笑","日常","萌系","其他"],
+                                    },
+                                    //X轴内容
+                                    xAxis: [{
+                                    type: 'category',
+                                    //name:'额度',
+                                    //这是设置的false，就不不显示下方的x轴，默认是true的
+                                    show: false,
+                                    //这里呢，就是每个柱的name了，根据实际情况下就好了，
+                                    data:["热血","穿越","奇幻","战斗","搞笑","日常","萌系","其他"],
+                                    axisLabel: {
+                                        //这个是倾斜角度，也是考虑到文字过多的时候，方式覆盖采用倾斜
+                                        //rotate: 30,
+                                                
+                                        //这里是考虑到x轴文件过多的时候设置的，如果文字太多，默认是间隔显示，设置为0，
+                                        //标示全部显示，当然，如果x轴都不显示，那也就没有意义了
+                                        interval: 0
+                                    }
+                                    }
+                                    ],
+                                    yAxis: [{
+                                    type: 'value',
+                                    name: '数量',
+                                    //下面的就很简单了，最小是多少，最大是多少，默认一次增加多少
+                                    min: 0,
+                                    max: 300,
+                                    interval: 10,
+                                    //下面是显示格式化，一般来说还是用的上的
+                                    axisLabel: {
+                                        formatter: '{value} '
+                                    }
+                                    }
+                                    ],
+                                    series: [{
+                                    name: '数量',
+                                    type: 'bar',
+                                    itemStyle: {
+                                        normal: {
+                                        //好，这里就是重头戏了，定义一个list，然后根据索引取得不同的值，这样就实现了，
+                                            color: function (params) {
+                                                // build a color map as your need.
+                                                var colorList = [
+                                                    '#C1232B', '#B5C334', '#FCCE10', '#E87C25', '#27727B',
+                                                    '#FE8463', '#9BCA63', '#FAD860', '#F3A43B', '#60C0DD',
+                                                    '#D7504B', '#C6E579', '#F4E001', '#F0805A', '#26C0C0'
+                                                ];
+                                                return colorList[params.dataIndex]
+                                            },
+                                            //以下为是否显示，显示位置和显示格式的设置了
+                                            label: {
+                                                show: true,
+                                                position: 'top',
+                                                //formatter: '{c}'
+                                                formatter: '{b}\n{c}'
+                                            }
+                                        }
+                                        },
+                                        //设置柱的宽度，要是数据太少，柱子太宽不美观~
+                                        barWidth: 70,
+                                        data: [123,77,272,226,139,217,139,430]
+                                        }
+                                    ]
+                                };
+                             
+                                // 使用刚指定的配置项和数据显示图表。
+                                myChart.setOption(option);
+                             
+                            </script>
+</html>

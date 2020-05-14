@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="jquery-3.5.0.js"></script>        
+        <script src="echarts.js"></script>
+        <script src="macarons.js"></script>
+        <script src="echarts-wordcloud.js"></script>
+    <title>影视可视化平台</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cloud.css">
+    <link rel="stylesheet" href="chang.css">
+</head>
+<body>
+    <div id="m">
+        
+        <div id="m1">
+            <table align="center" width="190" height="500" 
+            border="3px" cellpadding="5px" cellspacing="100" rules="rows" frame=void >
+            <thead align="center" bgcolor="#FFFFF" valign="center">
+               <tr>
+                 <td >  <h2>新影<br/> 可视化分析平台</h2></td>
+               </tr>
+           </thead>
+           <tbody align="center" bgcolor="#FFFFF" valign="center">
+            <tr>
+                <td width="18"  style="border-right: solid; border-color: dimgrey;vertical-align: middle;"> 
+                  <a href="index.html">
+                      <img src="images/0.png" alt="" align="middle">
+                      <b>新影&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp首页</b>
+                    </a> 
+                </td>
+               </tr>
+               <tr>
+                <td width="18"  style="border-right: solid; border-color: dimgrey;"> 
+                    <a href="chnge.html">
+                        <img src="images/3.png" alt="" align="middle">
+                  <b>影视趋势分析</b> 
+                    </a>
+                     
+                </td>
+               </tr>
+
+               <tr>
+                <td width="18"  style="border-right: solid; border-color: dimgrey;"> 
+                    <a href="cloud.html">
+                        <img src="images/2.png" alt="" align="middle">
+                        <b> 黄金影视词云</b> 
+                   </a>
+                    
+                </td>
+               </tr>
+               <tr>
+                <td width="18"  style="border-right: solid; border-color: dimgrey;vertical-align: middle;"> 
+                  <a href="percent.html">
+                      <img src="images/1.png" alt="" align="middle">
+                      <b>影视占比分析</b>
+                    </a> 
+                </td>
+               </tr>
+               
+              
+               <tr>
+                <td width="18"  style="border-right: solid; border-color: dimgrey;"> 
+                    <a href="suggest.html">
+                         <img src="images/4.png" alt="" align="middle">
+                   <b> 好剧&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp推荐</b>
+                    </a>
+                   
+                </td>
+               </tr>
+               <tr>
+                <td width="18"  style="border-right: solid; border-color: dimgrey;"> 
+                    
+                        <a href="login.php">
+                    <img src="images/6.png" alt="" align="middle">
+                       <b> 用户&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp登录</b>
+                    </a>
+                   
+                    
+                </td>
+               </tr>
+               <tr>
+                <td width="18"  style="border-right: solid; border-color: dimgrey;"> 
+                    
+                        <a href="introduce.html">
+                    <img src="images/5.png" alt="" align="middle">
+                       <b> 关于&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp我们</b>
+                    </a>
+                   
+                    
+                </td>
+               </tr>
+               
+           </tbody>
+           </table>
+        </div>
+
+       <div id="m2">
+            <div id="ctu1">
+                <div id="ctu11">
+               
+                </div>
+                <div id="ctu12">
+                热门电影类型词云
+                </div>
+            </div>
+            <div id="ctu2">
+                <div id="ctu21">
+               
+                </div>
+                <div id="ctu22">
+                热门电影词云
+                </div>
+            </div>
+            <div id="ctu3">
+                <div id="ctu31">
+               
+                </div>
+                <div id="ctu32">
+                热门电视剧词云
+                </div>
+            </div>
+            <div id="ctu4">
+                <div id="ctu41">
+               
+                </div>
+                <div id="ctu42">
+                热门番剧词云
+                </div>
+            </div>
+            <div id="ctu5">
+                <div id="ctu51">
+               
+                </div>
+                <div id="ctu52">
+                热门综艺词云
+                </div>
+            </div>
+       </div>
+    </div>
+    
+    
+</body>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('ctu11'), 'macarons');
+    option = {
+        title: {
+            // text: '词云',//标题
+            x: 'center',
+            textStyle: {
+                fontSize: 23
+            }
+        },
+        backgroundColor: 'white',
+        tooltip: {
+            show: true
+        },
+        series: [{
+            name: '热点分析',//数据提示窗标题
+            type: 'wordCloud',
+            sizeRange: [20, 100],//字号范围，如果设置太大会出现少词（溢出屏幕）
+            rotationRange: [-45, 70],//数据翻转范围
+            //shape: 'circle',
+            textPadding: 0,
+            autoSize: {
+                enable: true,
+                minSize: 3
+            },
+            textStyle: {
+                normal: {
+                    color: function() {
+                        return 'rgb(' + [
+                            Math.round(Math.random() * 160),
+                            Math.round(Math.random() * 160),
+                            Math.round(Math.random() * 160)
+                        ].join(',') + ')';
+                    }
+                },
+                emphasis: {
+                    shadowBlur: 10,
+                    shadowColor: '#333'
+                }
+            },
+            data:[
+                {
+                    "name": "喜剧",
+                    "value": 9513
+                },
+                {
+                    "name": "爱情",
+                    "value": 7038
+                },
+                {
+                    "name": "动作",
+                    "value": 6097
+                },
+                {
+                    "name": "科幻",
+                    "value": 2368
+                },
+                {
+                    "name": "战争",
+                    "value": 1382
+                },
+                {
+                    "name": "家庭",
+                    "value": 1485
+                },
+                {
+                    "name": "奇幻",
+                    "value": 2387
+                },
+                {
+                    "name": "古装",
+                    "value": 567
+                },
+                {
+                    "name": "惊悚",
+                    "value": 6051
+                },
+                {
+                    "name": "历史",
+                    "value": 1135
+                },
+                {
+                    "name": "音乐",
+                    "value": 1043
+                },
+                {
+                    "name": "悬疑",
+                    "value": 2965
+                },
+                {
+                    "name": "其他",
+                    "value": 963
+                }
+                ]//name和value建议用小写，大写有时会出现兼容问题
+        }]
+    };
+    if (option && typeof option === "object") {
+            myChart.setOption(option, true);
+        }
+    </script>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('ctu21'), 'macarons');
+        option = {
+            title: {
+                // text: '词云',//标题
+                x: 'center',
+                textStyle: {
+                    fontSize: 23
+                }
+            },
+            backgroundColor: '',
+            tooltip: {
+                show: true
+            },
+            series: [{
+                name: '热度',//数据提示窗标题
+                type: 'wordCloud',
+                sizeRange: [15, 50],//字号范围，如果设置太大会出现少词（溢出屏幕）
+                rotationRange: [-45, 70],//数据翻转范围
+                //shape: 'circle',
+                textPadding: 0,
+                autoSize: {
+                    enable: true,
+                    minSize: 3
+                },
+                textStyle: {
+                    normal: {
+                        color: function() {
+                            return 'rgb(' + [
+                                Math.round(Math.random() * 160),
+                                Math.round(Math.random() * 160),
+                                Math.round(Math.random() * 160)
+                            ].join(',') + ')';
+                        }
+                    },
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowColor: '#333'
+                    }
+                },
+                data:[
+                    {
+                        "name": "Cold Mountain",
+                        "value": 99993
+                    },
+                    {
+                        "name": "泰坦尼克号",
+                        "value": 999308
+                    },
+                    {
+                        "name": "一夜惊喜",
+                        "value": 99606
+                    },
+                    {
+                        "name": "Le papillon",
+                        "value": 99580
+                    },
+                    {
+                        "name": "霸王别姬",
+                        "value": 993975
+                    },
+                    {
+                        "name": "千与千寻",
+                        "value": 989858
+                    },
+                    {
+                        "name": "勇敢者的游戏",
+                        "value": 91899
+                    },
+                    {
+                        "name": "怦然心动",
+                        "value": 852841
+                    },
+                    {
+                        "name": "让子弹飞",
+                        "value": 850778
+                    },
+                    {
+                        "name": "少年派的奇幻漂流",
+                        "value": 776772
+                    },
+                    {
+                        "name": "醉乡民谣",
+                        "value": 75785
+                    },
+                    {
+                        "name": "星际穿越",
+                        "value": 752167
+                    },
+                    {
+                        "name": "The Negotiator",
+                        "value": 75071
+                    },
+                    {
+                        "name": "大话西游",
+                        "value": 740074
+                    },
+                    {
+                        "name": "机器人总动员",
+                        "value": 71033
+                    }
+                    ]//name和value建议用小写，大写有时会出现兼容问题
+            }]
+        };
+        if (option && typeof option === "object") {
+                myChart.setOption(option, true);
+            }
+        </script>
+         <script type="text/javascript">
+            var myChart = echarts.init(document.getElementById('ctu31'), 'sakura');
+            option = {
+                title: {
+                    // text: '词云',//标题
+                    x: 'center',
+                    textStyle: {
+                        fontSize: 23
+                    }
+                },
+                backgroundColor: '',
+                tooltip: {
+                    show: true
+                },
+                series: [{
+                    name: '热度',//数据提示窗标题
+                    type: 'wordCloud',
+                    sizeRange: [20, 100],//字号范围，如果设置太大会出现少词（溢出屏幕）
+                    rotationRange: [-45, 70],//数据翻转范围
+                    //shape: 'circle',
+                    textPadding: 0,
+                    autoSize: {
+                        enable: true,
+                        minSize: 3
+                    },
+                    textStyle: {
+                        normal: {
+                            color: function() {
+                                return 'rgb(' + [
+                                    Math.round(Math.random() * 160),
+                                    Math.round(Math.random() * 160),
+                                    Math.round(Math.random() * 160)
+                                ].join(',') + ')';
+                            }
+                        },
+                        emphasis: {
+                            shadowBlur: 10,
+                            shadowColor: '#333'
+                        }
+                    },
+                    data:[
+                        {
+                            "name": "清平乐",
+                            "value": 42044
+                        },
+                        {
+                            "name": "秋蝉",
+                            "value": 34231
+                        },
+                        {
+                            "name": "有你才有家",
+                            "value": 24163
+                        },
+                        {
+                            "name": "韫色过浓",
+                            "value": 23091
+                        },
+                        {
+                            "name": "猎狐",
+                            "value": 20109
+                        },
+                        {
+                            "name": "天醒之路",
+                            "value": 18020
+                        },
+                        {
+                            "name": "安家",
+                            "value": 15782
+                        },
+                        {
+                            "name": "我的刺猬女孩",
+                            "value": 14135
+                        },
+                        {
+                            "name": "如懿传",
+                            "value": 9873
+                        },
+                        {
+                            "name": "知否知否应是绿肥红瘦",
+                            "value": 8352
+                        },
+                        {
+                            "name": "老闺蜜",
+                            "value": 7256
+                        },
+                        {
+                            "name": "爱情的开关",
+                            "value": 6657
+                        },
+                        {
+                            "name": "夫妻的世界",
+                            "value": 6598
+                        },
+                        {
+                            "name": "锦衣之下",
+                            "value": 6578
+                        },
+                        {
+                            "name": "庆余年",
+                            "value": 6360
+                        }
+                        ]//name和value建议用小写，大写有时会出现兼容问题
+                }]
+            };
+            if (option && typeof option === "object") {
+                    myChart.setOption(option, true);
+                }
+            </script>
+            <script type="text/javascript">
+                var myChart = echarts.init(document.getElementById('ctu41'), 'sakura');
+                option = {
+                    title: {
+                        // text: '词云',//标题
+                        x: 'center',
+                        textStyle: {
+                            fontSize: 23
+                        }
+                    },
+                    backgroundColor: '',
+                    tooltip: {
+                        show: true
+                    },
+                    series: [{
+                        name: '新番热度',//数据提示窗标题
+                        type: 'wordCloud',
+                        sizeRange: [20, 100],//字号范围，如果设置太大会出现少词（溢出屏幕）
+                        rotationRange: [-45, 70],//数据翻转范围
+                        //shape: 'circle',
+                        textPadding: 0,
+                        autoSize: {
+                            enable: true,
+                            minSize: 3
+                        },
+                        textStyle: {
+                            normal: {
+                                color: function() {
+                                    return 'rgb(' + [
+                                        Math.round(Math.random() * 160),
+                                        Math.round(Math.random() * 160),
+                                        Math.round(Math.random() * 160)
+                                    ].join(',') + ')';
+                                }
+                            },
+                            
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowColor: '#333'
+                            }
+                        },
+                        data:[
+                            {
+                                "name": "辉夜大小姐想让我告白",
+                                "value": 2975805
+                            },
+                            {
+                                "name": "转生成为了只有乙女游戏破灭Flag的邪恶大小姐",
+                                "value": 1508091
+                            },
+                            {
+                                "name": "公主连结Re:Dive",
+                                "value": 1014935
+                            },
+                            {
+                                "name": "格莱普尼尔",
+                                "value": 494643
+                            },
+                            {
+                                "name": "某科学的超电磁炮T",
+                                "value": 453948
+                            },
+                            {
+                                "name": "昨日之歌",
+                                "value": 324478
+                            },
+                            {
+                                "name": "爱书的下克上",
+                                "value": 235676
+                            },
+                            {
+                                "name": "八男？别闹了！",
+                                "value": 205520
+                            },
+                            {
+                                "name": "动物新世代 / BNA",
+                                "value": 190589
+                            },
+                            {
+                                "name": "星掠者",
+                                "value": 140455
+                            },
+                            {
+                                "name": "神之塔",
+                                "value": 121996
+                            },
+                            {
+                                "name": "鬼灭之刃",
+                                "value": 100105
+                            },
+                            {
+                                "name": "夫白猫计划 零之纪元",
+                                "value": 107910
+                            },
+                            {
+                                "name": "邪神与厨二病少女",
+                                "value": 88955
+                            },
+                            {
+                                "name": "黑色四叶草",
+                                "value": 86116
+                            }
+                            ]//name和value建议用小写，大写有时会出现兼容问题
+                    }]
+                };
+                if (option && typeof option === "object") {
+                        myChart.setOption(option, true);
+                    }
+                </script>
+                <script type="text/javascript">
+                    var myChart = echarts.init(document.getElementById('ctu51'), 'sakura');
+                    option = {
+                        title: {
+                            // text: '词云',//标题
+                            x: 'center',
+                            textStyle: {
+                                fontSize: 23
+                            }
+                        },
+                        backgroundColor: '',
+                        tooltip: {
+                            show: true
+                        },
+                        series: [{
+                            name: '综艺热度',//数据提示窗标题
+                            type: 'wordCloud',
+                            sizeRange: [20, 100],//字号范围，如果设置太大会出现少词（溢出屏幕）
+                            rotationRange: [-45, 70],//数据翻转范围
+                            //shape: 'circle',
+                            textPadding: 0,
+                            autoSize: {
+                                enable: true,
+                                minSize: 3
+                            },
+                            textStyle: {
+                                normal: {
+                                    color: function() {
+                                        return 'rgb(' + [
+                                            Math.round(Math.random() * 160),
+                                            Math.round(Math.random() * 160),
+                                            Math.round(Math.random() * 160)
+                                        ].join(',') + ')';
+                                    }
+                                },
+                                
+                                emphasis: {
+                                    shadowBlur: 10,
+                                    shadowColor: '#333'
+                                }
+                            },
+                            data:[
+                                {
+                                    "name": "创造营",
+                                    "value": 77.3
+                                },
+                                {
+                                    "name": "青春有你",
+                                    "value": 76.77
+                                },
+                                {
+                                    "name": "朋友请听好",
+                                    "value": 73.4
+                                },
+                                {
+                                    "name": "王牌对王牌",
+                                    "value": 72.55
+                                },
+                                {
+                                    "name": "喜欢你我也是",
+                                    "value": 71.68
+                                },
+                                {
+                                    "name": "拜托了冰箱",
+                                    "value": 69.4
+                                },
+                                {
+                                    "name": "向往的生活",
+                                    "value":64.45
+                                },
+                                {
+                                    "name": "天天向上",
+                                    "value": 62.69
+                                },
+                                {
+                                    "name": "天赐的声音",
+                                    "value": 61.23
+                                },
+                                {
+                                    "name": "欢乐喜剧人",
+                                    "value": 61.33
+                                },
+                                {
+                                    "name": "快乐大本营",
+                                    "value": 60.99
+                                },
+                                {
+                                    "name": "我是唱作人",
+                                    "value": 60.85
+                                },
+                                {
+                                    "name": "极限挑战",
+                                    "value": 59.02
+                                },
+                                {
+                                    "name": "婚前21天",
+                                    "value": 57.42
+                                }
+                                
+                                ]//name和value建议用小写，大写有时会出现兼容问题
+                        }]
+                    };
+                    if (option && typeof option === "object") {
+                            myChart.setOption(option, true);
+                        }
+                    </script>
+</html>

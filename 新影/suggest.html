@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="jquery-3.5.0.js"></script>        
+        <script src="echarts.js"></script>
+        <script src="macarons.js"></script>
+        <script src="sakura.js"></script>
+        <script src="tech-blue.js"></script>
+    <title>影视可视化平台</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cloud.css">
+    <link rel="stylesheet" href="chang.css">
+</head>
+<body>
+    <div id="m">
+        <div id="m1">
+            <table align="center" width="190" height="500" 
+            border="3px" cellpadding="5px" cellspacing="100" rules="rows" frame=void >
+            <thead align="center" bgcolor="#FFFFF" valign="center">
+               <tr>
+                 <td >  <h2>新影<br/> 可视化分析平台</h2></td>
+               </tr>
+           </thead>
+           <tbody align="center" bgcolor="#FFFFF" valign="center">
+            <tr>
+                <td width="18"  style="border-right: solid; border-color: dimgrey;vertical-align: middle;"> 
+                  <a href="index.html">
+                      <img src="images/0.png" alt="" align="middle">
+                      <b>新影&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp首页</b>
+                    </a> 
+                </td>
+               </tr>
+               <tr>
+                <td width="18"  style="border-right: solid; border-color: dimgrey;"> 
+                    <a href="chnge.html">
+                        <img src="images/3.png" alt="" align="middle">
+                  <b>影视趋势分析</b> 
+                    </a>
+                     
+                </td>
+               </tr>
+
+               <tr>
+                <td width="18"  style="border-right: solid; border-color: dimgrey;"> 
+                    <a href="cloud.html">
+                        <img src="images/2.png" alt="" align="middle">
+                        <b> 黄金影视词云</b> 
+                   </a>
+                    
+                </td>
+               </tr>
+               <tr>
+                <td width="18"  style="border-right: solid; border-color: dimgrey;vertical-align: middle;"> 
+                  <a href="percent.html">
+                      <img src="images/1.png" alt="" align="middle">
+                      <b>影视占比分析</b>
+                    </a> 
+                </td>
+               </tr>
+               
+              
+               <tr>
+                <td width="18"  style="border-right: solid; border-color: dimgrey;"> 
+                    <a href="suggest.html">
+                         <img src="images/4.png" alt="" align="middle">
+                   <b> 好剧&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp推荐</b>
+                    </a>
+                   
+                </td>
+               </tr>
+               <tr>
+                <td width="18"  style="border-right: solid; border-color: dimgrey;"> 
+                    
+                        <a href="login.php">
+                    <img src="images/6.png" alt="" align="middle">
+                       <b> 用户&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp登录</b>
+                    </a>
+                   
+                    
+                </td>
+               </tr>
+               <tr>
+                <td width="18"  style="border-right: solid; border-color: dimgrey;"> 
+                    
+                        <a href="introduce.html">
+                    <img src="images/5.png" alt="" align="middle">
+                       <b> 关于&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp我们</b>
+                    </a>
+                   
+                    
+                </td>
+               </tr>
+               
+           </tbody>
+           </table>
+        </div>
+
+       <div id="m2">
+            <div id="ttu1">
+                <table align="center" width="300" height="400" border="3px" cellpadding="1" cellspacing="1"  
+                frame=hsides rules="rows">
+                    <caption style="font-size: 25px;">
+                        <b>
+                             电视剧
+                        </b>
+                        
+                        </caption>
+                    <thead align="center" bgcolor="white" valign="center">
+                        <tr>
+                            <td >排名</td>
+                            <td width="76"> 电视剧名称</td>
+                            <td width="76"> 评论数 </td>
+                            <td width="76"> 全网热度 </td>
+                        </tr>
+                    </thead>
+                    <tbody align="center" bgcolor="white" valign="center">
+                           <tr >
+                           <!--<td width="18" rowspan="8" style="border-right: solid; 
+                            border-color: dimgrey;"> 影<br/>视 </td>-->
+                            <td width="54"> 1 </td>
+                            <td><a href="" title="
+                                           类型：谍战/民国/战争 上映时间：2020-05-04
+                集数：60  单集片长：45
+                导演：李昂/付宁
+                出品公司：欢瑞世纪（东阳）影视传媒有限公司/浙江东阳国文影业有限公司/北京文投互娱投资有限责任公司/霍尔果斯合喜文化传媒有限公司
+                制作公司：欢瑞世纪影视制作中心/江苏广播电视台">秋蝉 </a></td>
+                            <td> 100000	</td>
+                            <td> 82.56 </td>
+                           <!--可以加列-->
+                        </tr>
+                            <!--可以加行--> 
+                        <tr>
+                           <td> 2 </td>
+                           <td> 清平乐 </td>
+                           <td>170000                       </td>
+                           <td> 75.94 </td>
+                        </tr>
+                        
+                        <tr>
+                             <td> 3 </td>
+                             <td> 猎狐</td>
+                             <td> 120000 </td>
+                             <td> 54.21 </td>
+                        </tr>
+                        
+                        <tr>
+                             <td> 4 </td>
+                             <td> 爱情的开关 </td>
+                             
+                             <td> 20000 </td>
+                             <td> 54.21</td>
+                             
+                        </tr>
+                        
+                            <tr>
+                            
+                            <td> 5 </td>
+                            		
+                            <td> 有你才有家</td>
+                            <td> 1610 </td>
+                            <td>49.23 </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>		
+                            <td>我们在梦开始的地方</td>
+                            <td>6461</td>
+                            <td>44.66</td>
+                        </tr>
+                            
+                        
+                    </tbody>
+                    </table>
+            </div>
+            <div id="ttu1">
+                <table align="center" width="300" height="400" border="3px" cellpadding="1" cellspacing="1"  
+                frame=hsides rules="rows">
+                    <caption style="font-size: 25px;">
+                        <b>
+                             网络电影
+                        </b>
+                        
+                        </caption>
+                    <thead align="center" bgcolor="white" valign="center">
+                        <tr>
+                            <td >排名</td>
+                            <td width="76"> 电影名称</td>
+                            <td width="76"> 评论数 </td>
+                            <td width="76"> 全网热度 </td>
+                        </tr>
+                    </thead>
+                    <tbody align="center" bgcolor="white" valign="center">
+                           <tr >
+                           <!--<td width="18" rowspan="8" style="border-right: solid; 
+                            border-color: dimgrey;"> 影<br/>视 </td>-->
+                            <td width="54"> 1 </td>
+                            <td><a href="" title=""> 伏虎武松</a></td>
+                            <td> 	6421</td>
+                            <td>  	53.81</td>
+                           <!--可以加列-->
+                        </tr>
+                            <!--可以加行--> 
+                        <tr>
+                           <td> 2 </td>
+                           <td> 我们永不言弃 </td>
+                           <td>3714                </td>
+                           <td> 53.34 </td>
+                        </tr>
+                        
+                        <tr>
+                             <td> 3 </td>
+                             <td> 无双花木兰</td>
+                             <td> 1588 </td>
+                             <td> 49.23 </td>
+                        </tr>
+                        
+                        <tr>
+                             <td> 4 </td>
+                             <td> 永生之战 </td>
+                             
+                             <td> 1588 </td>
+                             <td> 49.23</td>
+                             
+                        </tr>
+                        
+                            <tr>
+                            
+                            <td> 5 </td>
+                            		
+                            <td> 南海美人蛟</td>
+                            <td> 1249 </td>
+                            <td>48.85 </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>		
+                            <td>扶桑有孤</td>
+                            <td>1061</td>
+                            <td>48.82</td>
+                        </tr>
+                            
+                        
+                    </tbody>
+                    </table>
+            </div>
+            <div id="ttu1">
+                <table align="center" width="300" height="400" border="3px" cellpadding="1" cellspacing="1"  
+                frame=hsides rules="rows">
+                    <caption style="font-size: 25px;">
+                        <b>
+                             电视综艺
+                        </b>
+                        
+                        </caption>
+                    <thead align="center" bgcolor="white" valign="center">
+                        <tr>
+                            <td >排名</td>
+                            <td width="76"> 综艺名称</td>
+                            <td width="76"> 评论数 </td>
+                            <td width="76"> 全网热度 </td>
+                        </tr>
+                    </thead>
+                    <tbody align="center" bgcolor="white" valign="center">
+                           <tr >
+                           <!--<td width="18" rowspan="8" style="border-right: solid; 
+                            border-color: dimgrey;"> 影<br/>视 </td>-->
+                            <td width="54"> 1 </td>
+                            <td><a href="" title="">王牌对王牌 </a></td>
+                            <td> 310000</td>
+                            <td> 70.7 </td>
+                           <!--可以加列-->
+                        </tr>
+                            <!--可以加行--> 
+                        <tr>
+                           <td> 2 </td>
+                           <td>  天天向上</td>
+                           <td> 150000</td>
+                           <td> 69.75 </td>
+                        </tr>
+                        
+                        <tr>
+                             <td> 3 </td>
+                             <td> 向往的生活 </td>
+                           <td>110000 </td>
+                           <td>  68.41</td>
+                        </tr>
+                        
+                        <tr>
+                             <td> 4 </td>
+                             <td> 天赐的声音 </td>
+                           <td>90000 </td>
+                           <td> 65.4 </td>
+                             
+                        </tr>
+                        
+                            <tr>
+                            
+                            <td> 5 </td>
+                            		
+                            <td> 欢乐喜剧人 </td>
+                           <td>130000 </td>
+                           <td> 61.47 </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>		
+                            <td> 快乐大本营 </td>
+                           <td> 260000</td>
+                           <td>  61.27</td>
+                        </tr>
+                            
+                        
+                    </tbody>
+                    </table>
+            </div>
+
+            <div id="ttu2">
+
+            </div>
+            <div id="ttu3">
+
+            </div>
+            <div id="ttu4">
+
+            </div>
+       </div >
+       
+    </div>
+    
+    
+</body>
+<script type="text/javascript">
+	// 基于准备好的dom，初始化echarts实例
+	var myChart = echarts.init(document.getElementById('ttu2'));
+ 
+	// 指定图表的配置项和数据
+	var option = {
+		title: {
+			text: ""
+		},
+		//提示框取默认值，即鼠标移动到柱状图会显示内容
+		tooltip: {
+	//触发类型；轴触发，axis则鼠标hover到一条柱状图显示全部数据，item则鼠标hover到折线点显示相应数据，
+			trigger: 'axis', 
+			axisPointer: { //坐标轴指示器，坐标轴触发有效，
+				type: 'cross', //默认为line，line直线，cross十字准星，shadow阴影
+				crossStyle: {
+					color: '#fff'
+				}
+			}
+		},
+ 
+		//图例
+		legend: {
+            data:["秋蝉","清平乐","猎狐","爱情的开关","有你才有家","梦开始的地方"],
+		},
+		//X轴内容
+		xAxis: [{
+		type: 'category',
+		//name:'额度',
+		//这是设置的false，就不不显示下方的x轴，默认是true的
+		show: false,
+		//这里呢，就是每个柱的name了，根据实际情况下就好了，
+        data:["秋蝉","清平乐","猎狐","爱情的开关","有你才有家","梦开始的地方"],
+		axisLabel: {
+		    //这个是倾斜角度，也是考虑到文字过多的时候，方式覆盖采用倾斜
+		    //rotate: 30,
+					
+			//这里是考虑到x轴文件过多的时候设置的，如果文字太多，默认是间隔显示，设置为0，
+			//标示全部显示，当然，如果x轴都不显示，那也就没有意义了
+			interval: 0
+		}
+		}
+		],
+		yAxis: [{
+		type: 'value',
+		name: '热度',
+		//下面的就很简单了，最小是多少，最大是多少，默认一次增加多少
+		min: 0,
+		max: 100,
+		interval: 10,
+		//下面是显示格式化，一般来说还是用的上的
+		axisLabel: {
+			formatter: '{value} '
+		}
+		}
+		],
+		series: [{
+		name: '热度',
+		type: 'bar',
+		itemStyle: {
+			normal: {
+			//好，这里就是重头戏了，定义一个list，然后根据索引取得不同的值，这样就实现了，
+				color: function (params) {
+					// build a color map as your need.
+					var colorList = [
+                    '#D7504B', '#C6E579', '#F4E001', '#F0805A', '#26C0C0',
+						'#C1232B', '#B5C334', '#FCCE10', '#E87C25', '#27727B',
+						'#FE8463', '#9BCA63', '#FAD860', '#F3A43B', '#60C0DD',
+						
+					];
+					return colorList[params.dataIndex]
+				},
+				//以下为是否显示，显示位置和显示格式的设置了
+				label: {
+					show: true,
+					position: 'bottom',
+					//formatter: '{c}'
+					formatter: '{b}\n{c}'
+				}
+			}
+			},
+			//设置柱的宽度，要是数据太少，柱子太宽不美观~
+			barWidth: 70,
+			data: [82.56,80.63,75.79,54.21,49.23,44.46]
+			}
+		]
+	};
+ 
+	// 使用刚指定的配置项和数据显示图表。
+	myChart.setOption(option);
+ 
+</script>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('ttu3'));
+     
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: ""
+            },
+            //提示框取默认值，即鼠标移动到柱状图会显示内容
+            tooltip: {
+        //触发类型；轴触发，axis则鼠标hover到一条柱状图显示全部数据，item则鼠标hover到折线点显示相应数据，
+                trigger: 'axis', 
+                axisPointer: { //坐标轴指示器，坐标轴触发有效，
+                    type: 'cross', //默认为line，line直线，cross十字准星，shadow阴影
+                    crossStyle: {
+                        color: '#fff'
+                    }
+                }
+            },
+     
+            //图例
+            legend: {
+                data:["伏虎武松","我们永不言弃","无双花木兰","永生之战","南海美人鲛","扶桑有孤"],
+            },
+            //X轴内容
+            xAxis: [{
+            type: 'category',
+            //name:'额度',
+            //这是设置的false，就不不显示下方的x轴，默认是true的
+            show: false,
+            //这里呢，就是每个柱的name了，根据实际情况下就好了，
+            data:["伏虎武松","我们永不言弃","无双花木兰","永生之战","南海美人鲛","扶桑有孤"],
+            axisLabel: {
+                //这个是倾斜角度，也是考虑到文字过多的时候，方式覆盖采用倾斜
+                //rotate: 30,
+                        
+                //这里是考虑到x轴文件过多的时候设置的，如果文字太多，默认是间隔显示，设置为0，
+                //标示全部显示，当然，如果x轴都不显示，那也就没有意义了
+                interval: 0
+            }
+            }
+            ],
+            yAxis: [{
+            type: 'value',
+            name: '热度',
+            //下面的就很简单了，最小是多少，最大是多少，默认一次增加多少
+            min: 0,
+            max: 100,
+            interval: 10,
+            //下面是显示格式化，一般来说还是用的上的
+            axisLabel: {
+                formatter: '{value} '
+            }
+            }
+            ],
+            series: [{
+            name: '热度',
+            type: 'bar',
+            itemStyle: {
+                normal: {
+                //好，这里就是重头戏了，定义一个list，然后根据索引取得不同的值，这样就实现了，
+                    color: function (params) {
+                        // build a color map as your need.
+                        var colorList = [
+                            
+                            '#FE8463', '#9BCA63', '#FAD860', '#F3A43B', '#60C0DD',
+                            '#D7504B', '#C6E579', '#F4E001', '#F0805A', '#26C0C0'
+                        ];
+                        return colorList[params.dataIndex]
+                    },
+                    //以下为是否显示，显示位置和显示格式的设置了
+                    label: {
+                        show: true,
+                        position: 'top',
+                        //formatter: '{c}'
+                        formatter: '{b}\n{c}'
+                    }
+                }
+                },
+                //设置柱的宽度，要是数据太少，柱子太宽不美观~
+                barWidth: 70,
+                data: [70.7,69.75,68.41,65.4,61.47,61.27]
+                }
+            ]
+        };
+     
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+     
+    </script>
+        <script type="text/javascript">
+            // 基于准备好的dom，初始化echarts实例
+            var myChart = echarts.init(document.getElementById('ttu4'));
+         
+            // 指定图表的配置项和数据
+            var option = {
+                title: {
+                    text: ""
+                },
+                //提示框取默认值，即鼠标移动到柱状图会显示内容
+                tooltip: {
+            //触发类型；轴触发，axis则鼠标hover到一条柱状图显示全部数据，item则鼠标hover到折线点显示相应数据，
+                    trigger: 'axis', 
+                    axisPointer: { //坐标轴指示器，坐标轴触发有效，
+                        type: 'cross', //默认为line，line直线，cross十字准星，shadow阴影
+                        crossStyle: {
+                            color: '#fff'
+                        }
+                    }
+                },
+         
+                //图例
+                legend: {
+                    data:["王牌对王牌","天天向上","向往的生活","天赐的声音","欢乐喜剧人","快乐大本营"],
+                },
+                //X轴内容
+                xAxis: [{
+                type: 'category',
+                //name:'额度',
+                //这是设置的false，就不不显示下方的x轴，默认是true的
+                show: false,
+                //这里呢，就是每个柱的name了，根据实际情况下就好了，
+                data:["王牌对王牌","天天向上","向往的生活","天赐的声音","欢乐喜剧人","快乐大本营"],
+                axisLabel: {
+                    //这个是倾斜角度，也是考虑到文字过多的时候，方式覆盖采用倾斜
+                    //rotate: 30,
+                            
+                    //这里是考虑到x轴文件过多的时候设置的，如果文字太多，默认是间隔显示，设置为0，
+                    //标示全部显示，当然，如果x轴都不显示，那也就没有意义了
+                    interval: 0
+                }
+                }
+                ],
+                yAxis: [{
+                type: 'value',
+                name: '热度',
+                //下面的就很简单了，最小是多少，最大是多少，默认一次增加多少
+                min: 0,
+                max: 100,
+                interval: 10,
+                //下面是显示格式化，一般来说还是用的上的
+                axisLabel: {
+                    formatter: '{value} '
+                }
+                }
+                ],
+                series: [{
+                name: '热度',
+                type: 'bar',
+                itemStyle: {
+                    normal: {
+                    //好，这里就是重头戏了，定义一个list，然后根据索引取得不同的值，这样就实现了，
+                        color: function (params) {
+                            // build a color map as your need.
+                            var colorList = [
+                                '#C1232B', '#B5C334', '#FCCE10', '#E87C25', '#27727B',
+                                '#FE8463', '#9BCA63', '#FAD860', '#F3A43B', '#60C0DD',
+                                '#D7504B', '#C6E579', '#F4E001', '#F0805A', '#26C0C0'
+                            ];
+                            return colorList[params.dataIndex]
+                        },
+                        //以下为是否显示，显示位置和显示格式的设置了
+                        label: {
+                            show: true,
+                            position: 'bottom',
+                            //formatter: '{c}'
+                            formatter: '{b}\n{c}'
+                        }
+                    }
+                    },
+                    //设置柱的宽度，要是数据太少，柱子太宽不美观~
+                    barWidth: 70,
+                    data: [70.7,69.75,68.41,65.4,61.47,61.27]
+                    }
+                ]
+            };
+         
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+         
+        </script>
+</html>
