@@ -9,7 +9,7 @@ if(isset($_POST['dosubmit'])) {
 		include "connect.php";
 		//到数据查找用户输入的是否正确
 		
-		echo "你好: ".$_SESSION['username']." <a href='stulogout.php'><br>退出</a><br>";
+		
 		
 		$sql = "select * from tb_userinfor where username =? and password = ?";
 		$stmt = $db -> prepare($sql);

@@ -18,7 +18,7 @@
 	<?php
 	include "connect.php";
 	include "config.inc.php";
-	include "function.inc.php";
+	
 	
 /*	echo '<br>';
 	echo '<br>';*/
@@ -180,15 +180,15 @@
                                while(list( $id,$uid, $bigtype,$smalltype, $watchname,$hot,$score,$time) = $stmt->fetch(PDO::FETCH_NUM)) {
                                    
                                     echo '<tr>';
-								   echo '<td><input type="checkbox" name="id[]" value="'.$id.'"></td>';
+								   echo '<td width="76"><input type="checkbox" name="id[]" value="'.$id.'"></td>';
 									
-									echo '<td width="76">'.$bigtype.'</td>';
-									echo '<td width="76">'.$smalltype.'</td>';
-									echo '<td width="76">'.$watchname.'</td>';
-								   echo '<td width="76">'.$hot.'</td>';
-								   echo '<td width="76">'.$score.'</td>';
-								   echo '<td width="76">'.$time.'</td>';
-							  echo '<td><a onclick="return confirm(\'你确定要删除这个记录吗？\')" href="userinfor.php?action=del'.$args.'&page='.$page->page.'&id='.$id.'">删除</a></td>';
+									echo '<td width="85">'.$bigtype.'</td>';
+									echo '<td width="85">'.$smalltype.'</td>';
+									echo '<td width="150">'.$watchname.'</td>';
+								   echo '<td width="85">'.$hot.'</td>';
+								   echo '<td width="85">'.$score.'</td>';
+								   echo '<td width="85">'.$time.'</td>';
+							  echo '<td width="85"><a onclick="return confirm(\'你确定要删除这个记录吗？\')" href="userinfor.php?action=del'.$args.'&page='.$page->page.'&id='.$id.'">删除</a></td>';
 		echo '</tr>';
 	}
 	                        echo '<tr><td><input type="submit" name="dosubmit" value="删除"/></td><td colspan="7" align="right"></td></tr>';
